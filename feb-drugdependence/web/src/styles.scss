@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import 'variables';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: $color-lighttext;
+  background-color: $color-darkbg;
+  height: 100%;
+  margin: 20;
+}
+
+.flex-container {
+  height: 100%;
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ngx-charts text {
+  fill: $color-lighttext;
+}
+
+.legend-labels {
+  .legend-label-text {
+    color: $color-lighttext;
+  }
+}
+.chart-legend .legend-label .active .legend-label-text {
+  color:#fff
+ }
+
+h1 {
+  color: $color-lighttext;
+}
+
+th {
+  color: $color-lighttext;
+}
+
+td {
+  color: $color-accent-lilac;
+}
+
+.subhead {
+  color: $color-accent-lilac;
+  margin-bottom: 20px;
+  width: 60%;
+}
+
+.legend-title-text {
+  color: $color-lighttext;
+}
+
+a {
+  color: inherit;
+}
+
+.generalInfo {
+  text-align: right;
+  color: lightgrey;
+
+  .header {
+    font-size: 15px;
+  }
+
+  div {
+    font-size: 12px;
+  }
+}

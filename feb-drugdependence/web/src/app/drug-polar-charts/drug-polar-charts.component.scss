@@ -1,0 +1,40 @@
+@import '../../variables';
+$color-darkbg : #1C2029;
+$color-lightbg : #12141a;
+$color-lighttext : #eaeaea;
+$color-accent-lilac : #ccc6ea;
+$color-accent-purple: #423A6A;
+ul {
+    list-style: none;
+    margin: .5em;
+}
+ul li {
+    display: inline-block;
+    padding: 10px 30px 10px 30px;
+    color : $color-accent-lilac;
+    border-right: .05em solid  rgba(211, 211, 211, 0.459);
+    margin: 0 auto;
+}
+ul li:last-child{
+    border-right: none;
+}
+ul li:hover{
+    color: #fff;
+    background-color:$color-accent-purple;
+}
+
+
+ul li.selected {
+    background-color: #8776D8;;
+    color: #fff;
+}
+
+.content { 
+    display: flex;
+    align-content: space-around;
+}
+
+.chart-legend .legend-label .active .legend-label-text {
+    color:#fff
+  }
+  

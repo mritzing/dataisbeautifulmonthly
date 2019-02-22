@@ -1,0 +1,30 @@
+<div class="flex-container">
+  <div class="selector-container">
+    <ul class="dataselectors">
+      <li *ngFor="let item of dataselectList" [class.selected]="item === dataselector" (click)="onDataClick(item)">
+        <span class="data-buttons"> {{item.title}} </span>
+      </li>
+    </ul>
+  </div>
+  <div class="subhead">{{dataselector.schedule_description}}</div>
+  <div class="content">
+    <ngx-charts-polar-chart [view]="polarView" [results]="dataselector.data" [legend]="true" [showXAxisLabel]="true"
+      [showYAxisLabel]="false" [xAxis]="true" [yAxis]="false" [labelTrim]="false" [animations]="false" [tooltipDisabled]="false"
+      [showSeriesOnHover]="true" [yAxisMinScale]=3 (legendLabelClick)="onLegendLabelClick($event)" (select)="onLegendSelect($event)">
+    </ngx-charts-polar-chart>
+    <div *ngIf="legendSelector">
+      <div>{{legendSelector.name}}</div>
+      <ngx-charts-bar-horizontal
+        [view]="barView"
+        [results]="legendSelector.series"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [showXAxisLabel]="false"
+        [showYAxisLabel]="false">
+      </ngx-charts-bar-horizontal>
+      <!--<div>{{selectObj.description}}</div>-->
+    </div>
+  </div>
+
+</div>
